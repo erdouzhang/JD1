@@ -1,0 +1,1265 @@
+@charset "UTF-8";
+/*
+定义变量
+ */
+/*
+  css初始化
+ */
+/* line 8, ../sass/base.scss */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../sass/base.scss */
+button,
+fieldset,
+img,
+input {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+/* line 20, ../sass/base.scss */
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun","宋体";
+}
+
+/* line 26, ../sass/base.scss */
+input,
+select {
+  vertical-align: middle;
+}
+
+/* line 31, ../sass/base.scss */
+input,
+select,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* line 38, ../sass/base.scss */
+textarea {
+  resize: none;
+}
+
+/*防止文本域拖动*/
+/* line 42, ../sass/base.scss */
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/*  去掉图片底部默认的3像素空白缝隙*/
+/* line 47, ../sass/base.scss */
+ul {
+  list-style: none;
+}
+
+/* line 51, ../sass/base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+/* line 62, ../sass/base.scss */
+em,
+i,
+s {
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* line 69, ../sass/base.scss */
+body {
+  color: #999;
+  font-size: 12px;
+  background-color: #f6f6f6;
+}
+
+/* line 75, ../sass/base.scss */
+a {
+  color: #999;
+  text-decoration: none;
+}
+
+/* line 80, ../sass/base.scss */
+a:hover {
+  color: #c81623;
+}
+
+/* line 84, ../sass/base.scss */
+.col-red {
+  color: #c81623;
+}
+
+/*公共类*/
+/* line 88, ../sass/base.scss */
+.w {
+  /*版心 提取 */
+  width: 1190px;
+  margin: 0 auto;
+}
+
+/* line 94, ../sass/base.scss */
+.fl {
+  float: left;
+}
+
+/* line 98, ../sass/base.scss */
+.fr {
+  float: right;
+}
+
+/* line 102, ../sass/base.scss */
+.al {
+  text-align: left;
+}
+
+/* line 106, ../sass/base.scss */
+.ac {
+  text-align: center;
+}
+
+/* line 110, ../sass/base.scss */
+.ar {
+  text-align: right;
+}
+
+/* line 114, ../sass/base.scss */
+.hide {
+  display: none;
+}
+
+/*头部开始*/
+/* line 118, ../sass/base.scss */
+#mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /*铺满整个页面*/
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  /*遮住所有东西，权重最大*/
+  display: none;
+}
+
+/* line 126, ../sass/base.scss */
+#box_login {
+  width: 400px;
+  height: 250px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -200px;
+  /*宽和高的一半*/
+  z-index: 1000;
+  display: none;
+}
+/* line 136, ../sass/base.scss */
+#box_login #close_login {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* line 147, ../sass/base.scss */
+header #header-banner {
+  position: relative;
+  height: 80px;
+  background-color: #FFCCEA;
+}
+/* line 152, ../sass/base.scss */
+header #header-banner .w {
+  position: relative;
+}
+/* line 155, ../sass/base.scss */
+header #header-banner .w #close-banner {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  background: url("../images/close.png") no-repeat;
+}
+/* line 163, ../sass/base.scss */
+header #header-banner .w #close-banner:hover {
+  background-position: bottom;
+}
+/* line 170, ../sass/base.scss */
+header #header-nav {
+  background-color: #e3e4e5;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+/* line 177, ../sass/base.scss */
+header #header-nav .fl li {
+  margin-left: 204px;
+}
+/* line 180, ../sass/base.scss */
+header #header-nav .fl li .dt {
+  padding-right: 7px;
+  padding-left: 7px;
+}
+/* line 184, ../sass/base.scss */
+header #header-nav .fl li .dt i {
+  color: #c81623;
+}
+/* line 193, ../sass/base.scss */
+header #header-nav .fr ul li {
+  float: left;
+  padding: 0 10px;
+}
+/* line 197, ../sass/base.scss */
+header #header-nav .fr ul li.line {
+  width: 1px;
+  height: 13px;
+  background-color: #ccc;
+  margin-top: 9px;
+  padding: 0;
+}
+/* line 207, ../sass/base.scss */
+header #header-nav .fr ul li a.col-red {
+  color: #c81623;
+}
+/* line 216, ../sass/base.scss */
+header #header-search {
+  height: 140px;
+}
+/* line 219, ../sass/base.scss */
+header #header-search .w {
+  position: relative;
+  height: 140px;
+}
+/* line 223, ../sass/base.scss */
+header #header-search .w h1 {
+  width: 190px;
+  height: 170px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  top: -31px;
+  left: 0;
+  box-shadow: 0 -12px 10px rgba(0, 0, 0, 0.2);
+}
+/* line 233, ../sass/base.scss */
+header #header-search .w h1 #logo {
+  width: 190px;
+  height: 170px;
+  background: url("../images/logo.v2.png") no-repeat;
+  cursor: pointer;
+}
+/* line 241, ../sass/base.scss */
+header #header-search .w #search {
+  position: relative;
+  height: 60px;
+}
+/* line 245, ../sass/base.scss */
+header #header-search .w #search .form {
+  position: absolute;
+  left: 320px;
+  top: 25px;
+  width: 550px;
+  height: 35px;
+}
+/* line 252, ../sass/base.scss */
+header #header-search .w #search .form input {
+  left: 0;
+  padding: 4px;
+  width: 490px;
+  height: 25px;
+  border: 1px solid #f10215;
+  line-height: 25px;
+  font-size: 14px;
+  color: #989898;
+}
+/* line 263, ../sass/base.scss */
+header #header-search .w #search .form button {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  border: none;
+  background-color: #f10215;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+/* line 279, ../sass/base.scss */
+header #header-search .w #gwc {
+  position: absolute;
+  right: 99px;
+  top: 25px;
+  width: 188px;
+  height: 33px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 33px;
+}
+/* line 289, ../sass/base.scss */
+header #header-search .w #gwc .gwc-icon {
+  position: relative;
+}
+/* line 292, ../sass/base.scss */
+header #header-search .w #gwc .gwc-icon .icon1 {
+  position: absolute;
+  left: 34px;
+  top: 8px;
+  width: 16px;
+  height: 13px;
+  background: url("../images/sprite.png") no-repeat -1px -92px;
+}
+/* line 301, ../sass/base.scss */
+header #header-search .w #gwc .gwc-icon .icon2 {
+  position: absolute;
+  top: -3px;
+  right: 42px;
+  width: 16px;
+  height: 14px;
+  background-color: #f10215;
+  line-height: 14px;
+  color: #fff;
+  border-radius: 8px 8px 8px 0;
+}
+/* line 315, ../sass/base.scss */
+header #header-search .w #hot-words {
+  position: absolute;
+  left: 320px;
+  top: 65px;
+  width: 550px;
+  height: 20px;
+  line-height: 20px;
+}
+/* line 323, ../sass/base.scss */
+header #header-search .w #hot-words a {
+  float: left;
+  margin-right: 10px;
+  white-space: nowrap;
+  color: #999;
+}
+/* line 329, ../sass/base.scss */
+header #header-search .w #hot-words a.col-red {
+  color: #c81623;
+}
+/* line 333, ../sass/base.scss */
+header #header-search .w #hot-words a:hover {
+  color: #c81623;
+}
+/* line 339, ../sass/base.scss */
+header #header-search .w #nav {
+  position: absolute;
+  left: 200px;
+  bottom: 0;
+  width: 790px;
+  height: 40px;
+}
+/* line 346, ../sass/base.scss */
+header #header-search .w #nav .nav-items ul {
+  float: left;
+}
+/* line 348, ../sass/base.scss */
+header #header-search .w #nav .nav-items ul li {
+  float: left;
+  margin-left: 30px;
+  line-height: 40px;
+  font-weight: 700;
+}
+/* line 353, ../sass/base.scss */
+header #header-search .w #nav .nav-items ul li a {
+  font-size: 16px;
+  color: #555;
+}
+/* line 356, ../sass/base.scss */
+header #header-search .w #nav .nav-items ul li a:hover {
+  color: #e01222;
+}
+/* line 360, ../sass/base.scss */
+header #header-search .w #nav .nav-items ul li span {
+  color: #ddd;
+}
+/* line 367, ../sass/base.scss */
+header #header-search .w #fr-logo {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 190px;
+  height: 40px;
+  background: url(../images/nav-logo.png);
+}
+/* line 374, ../sass/base.scss */
+header #header-search .w #fr-logo a {
+  display: block;
+  height: 40px;
+}
+
+/* 头部结束*/
+/* 广告 开始*/
+/* line 385, ../sass/base.scss */
+#ad {
+  position: relative;
+  margin-bottom: 10px;
+  background: url(../images/ad-l.png) no-repeat 50% 0;
+}
+/* line 389, ../sass/base.scss */
+#ad .ad-con {
+  width: 1190px;
+  margin: 0 auto;
+  height: 480px;
+}
+/* line 394, ../sass/base.scss */
+#ad .ad-con .ad-list1 {
+  height: 100%;
+  width: 190px;
+  float: left;
+  margin-right: 10px;
+}
+/* line 399, ../sass/base.scss */
+#ad .ad-con .ad-list1 .ad-menu {
+  padding: 15px 0;
+  height: 450px;
+  background-color: #6e6568;
+}
+/* line 403, ../sass/base.scss */
+#ad .ad-con .ad-list1 .ad-menu li {
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 407, ../sass/base.scss */
+#ad .ad-con .ad-list1 .ad-menu li a {
+  color: #fff;
+  font-size: 14px;
+}
+/* line 410, ../sass/base.scss */
+#ad .ad-con .ad-list1 .ad-menu li a:hover {
+  color: #c81623;
+}
+/* line 414, ../sass/base.scss */
+#ad .ad-con .ad-list1 .ad-menu li span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+/* line 422, ../sass/base.scss */
+#ad .ad-con .ad-list2 {
+  width: 790px;
+  height: 100%;
+  float: left;
+}
+/* line 426, ../sass/base.scss */
+#ad .ad-con .ad-list2 .slider-main {
+  position: relative;
+  margin-bottom: 10px;
+  /*height: 340px;*/
+  overflow: hidden;
+  /*background-color: red;*/
+}
+/* line 431, ../sass/base.scss */
+#boxID {
+    width: 790px;
+    height: 326px;
+}
+
+/* line 437, ../sass/base.scss */
+#ad .ad-con .ad-list2 .slider-down {
+  width: 790px;
+}
+/* line 439, ../sass/base.scss */
+#ad .ad-con .ad-list2 .slider-down .down-l {
+  float: left;
+  width: 390px;
+  height: 130px;
+}
+/* line 444, ../sass/base.scss */
+#ad .ad-con .ad-list2 .slider-down .down-r {
+  float: right;
+  width: 390px;
+  height: 130px;
+}
+/* line 451, ../sass/base.scss */
+#ad .ad-con .ad-list3 {
+  float: right;
+  margin-left: 10px;
+  width: 190px;
+  height: 100%;
+  background-color: #fff;
+}
+/* line 457, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user {
+  padding: 0 10px;
+  height: 115px;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 461, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-info {
+  overflow: hidden;
+  position: relative;
+  padding: 15px 0 15px 60px;
+  height: 45px;
+}
+/* line 466, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-info .info-logo {
+  overflow: hidden;
+  position: absolute;
+  margin-left: -60px;
+  width: 45px;
+  height: 45px;
+}
+/* line 472, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-info .info-logo img {
+  display: block;
+  height: 100%;
+  border-radius: 23px;
+}
+/* line 478, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-info p {
+  overflow: hidden;
+  margin-top: 2px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 484, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-info p a {
+  margin-right: 5px;
+  color: #000;
+}
+/* line 487, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-info p a:hover {
+  color: #e01222;
+}
+/* line 494, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-profit {
+  height: 24px;
+}
+/* line 496, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-profit a {
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  height: 20px;
+  border: 2px solid #e01222;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #e01222;
+}
+/* line 507, ../sass/base.scss */
+#ad .ad-con .ad-list3 .user .user-profit a:hover {
+  background-color: #e01222;
+  color: #fff;
+}
+/* line 514, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news {
+  overflow: hidden;
+  padding: 0 15px;
+  height: 154px;
+}
+/* line 518, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news .news-tab {
+  padding: 8px 0 4px;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  line-height: 14px;
+}
+/* line 523, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news .news-tab a {
+  color: #333;
+}
+/* line 525, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news .news-tab a.line {
+  padding-right: 12px;
+  border-right: 1px solid #dfe0e1;
+}
+/* line 529, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news .news-tab a.left {
+  padding: 0 48px 0 12px;
+}
+/* line 535, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news .news-con {
+  padding: 12px 0;
+}
+/* line 539, ../sass/base.scss */
+#ad .ad-con .ad-list3 .news .news-con .con .news-list .news-item {
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 160px;
+}
+/* line 550, ../sass/base.scss */
+#ad .ad-con .ad-list3 .service {
+  overflow: hidden;
+  position: relative;
+  height: 210px;
+}
+/* line 554, ../sass/base.scss */
+#ad .ad-con .ad-list3 .service ul {
+  margin-left: -1px;
+  width: 192px;
+  height: 210px;
+  overflow: hidden;
+}
+/* line 559, ../sass/base.scss */
+#ad .ad-con .ad-list3 .service ul li {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 47px;
+  height: 69px;
+  border-top: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  text-align: center;
+}
+/* line 568, ../sass/base.scss */
+#ad .ad-con .ad-list3 .service ul li a {
+  display: block;
+  padding-top: 14px;
+  height: 55px;
+}
+/* line 573, ../sass/base.scss */
+#ad .ad-con .ad-list3 .service ul li a i {
+  display: block;
+  width: 19px;
+  height: 24px;
+  background: url(../images/icon_lifeserv.png) no-repeat -28px 0;
+  margin: 0 auto;
+}
+/* line 580, ../sass/base.scss */
+#ad .ad-con .ad-list3 .service ul li a span {
+  height: 22px;
+  line-height: 28px;
+  border-top: 2px solid #fff;
+}
+
+/* 广告 结束*/
+/* 秒杀活动开始*/
+/* line 595, ../sass/base.scss */
+#ms {
+  margin-bottom: 30px;
+}
+/* line 597, ../sass/base.scss */
+#ms .ms-bg {
+  margin: 0 auto;
+  width: 1190px;
+}
+/* line 600, ../sass/base.scss */
+#ms .ms-bg .ms-top {
+  position: relative;
+  padding: 0 20px 0 30px;
+  height: 55px;
+  line-height: 55px;
+  color: #fff;
+  background: url(../images/seckill_hd.png) no-repeat;
+}
+/* line 607, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-l {
+  float: left;
+}
+/* line 609, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-l .l1 {
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  width: 25px;
+  height: 25px;
+  background: url(../images/sprite_index@1x.png) no-repeat -190px -49px;
+}
+/* line 617, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-l .l2 {
+  position: absolute;
+  left: 29px;
+  top: 8px;
+  width: 34px;
+  height: 40px;
+  background: url(../images/sprite_index@1x.png) no-repeat 0 -40px;
+}
+/* line 626, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-l h3 {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+  height: 40px;
+  padding-top: 9px;
+  padding-left: 50px;
+  padding-right: 10px;
+}
+/* line 636, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-l a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+/* line 642, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-r {
+  float: right;
+  display: block;
+}
+/* line 645, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-r span {
+  float: left;
+  font-size: 14px;
+  padding-top: 10px;
+  line-height: 45px;
+  color: #fff;
+}
+/* line 652, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-r .timer {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 656, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-r .timer .t {
+  float: left;
+  display: inline-block;
+  width: 35px;
+  height: 37px;
+  background-color: #440106;
+  margin-top: 10px;
+  color: #f90013;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  line-height: 37px;
+  border-radius: 5px;
+}
+/* line 671, ../sass/base.scss */
+#ms .ms-bg .ms-top .top-r .timer .d {
+  float: left;
+  display: inline-block;
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+}
+/* line 682, ../sass/base.scss */
+#ms .ms-bg .ms-down {
+  padding: 12px 0 13px;
+  height: 225px;
+}
+/* line 686, ../sass/base.scss */
+#ms .ms-bg .ms-down ul {
+  float: left;
+  width: 1000px;
+  position: relative;
+  background-color: #fff;
+}
+/* line 691, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li {
+  float: left;
+  width: 170px;
+  height: 225px;
+  padding: 0 14px 0 15px;
+  border-right: 1px solid #e0e0e0;
+}
+/* line 697, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con {
+  position: relative;
+  text-align: center;
+}
+/* line 701, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con .up {
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/sprite_index@1x.png) no-repeat -54px -40px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+/* line 712, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con a {
+  color: #999;
+}
+/* line 714, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con a img {
+  width: 130px;
+  height: 130px;
+  margin: 17px 0;
+}
+/* line 719, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con a p {
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: left;
+  height: 32px;
+  line-height: 16px;
+}
+/* line 727, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con a:hover {
+  color: #f10214;
+}
+/* line 731, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .list1-con .shadow {
+  position: absolute;
+  left: 0;
+  top: 130px;
+  text-align: center;
+  background: url(../images/sprite_index@1x.png) no-repeat 0 0;
+  width: 170px;
+  height: 20px;
+}
+/* line 742, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .price {
+  padding: 3px 0;
+  height: 25px;
+  font-family: Arial;
+  color: #f10214;
+}
+/* line 748, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .price i {
+  font-size: 10px;
+  font-weight: 400;
+}
+/* line 752, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .price .price-l {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+/* line 757, ../sass/base.scss */
+#ms .ms-bg .ms-down ul li .price del {
+  color: #999;
+}
+/* line 766, ../sass/base.scss */
+#ms .ms-bg .ms-down .ms-ad {
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+/* 秒杀活动 结束*/
+/* 发现好货开始*/
+/* line 777, ../sass/base.scss */
+#find {
+  height: 444px;
+  margin-bottom: 30px;
+}
+/* line 780, ../sass/base.scss */
+#find .con {
+  width: 1190px;
+  margin: 0 auto;
+}
+/* line 783, ../sass/base.scss */
+#find .con .col1, #find .con .col2, #find .con .col3 {
+  float: left;
+  width: 390px;
+  height: 444px;
+}
+/* line 787, ../sass/base.scss */
+#find .con .col1 .box-t, #find .con .col2 .box-t, #find .con .col3 .box-t {
+  position: relative;
+  padding: 0 20px 0 30px;
+  height: 55px;
+  line-height: 55px;
+  color: #fff;
+}
+/* line 793, ../sass/base.scss */
+#find .con .col1 .box-t .bg-r, #find .con .col2 .box-t .bg-r, #find .con .col3 .box-t .bg-r {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 19px solid #f6f6f6;
+  border-right: 19px solid transparent;
+}
+/* line 802, ../sass/base.scss */
+#find .con .col1 .box-t .bg, #find .con .col2 .box-t .bg, #find .con .col3 .box-t .bg {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 26px;
+  height: 26px;
+}
+/* line 809, ../sass/base.scss */
+#find .con .col1 .box-t h3, #find .con .col2 .box-t h3, #find .con .col3 .box-t h3 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+}
+/* line 814, ../sass/base.scss */
+#find .con .col1 .box-t a, #find .con .col2 .box-t a, #find .con .col3 .box-t a {
+  float: right;
+  display: inline-block;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+/* line 825, ../sass/base.scss */
+#find .con .col1 .box-d, #find .con .col2 .box-d, #find .con .col3 .box-d {
+  padding: 10px;
+  height: 369px;
+  background-color: #fff;
+}
+/* line 829, ../sass/base.scss */
+#find .con .col1 .box-d .list, #find .con .col2 .box-d .list, #find .con .col3 .box-d .list {
+  width: 370px;
+  height: 363px;
+}
+/* line 835, ../sass/base.scss */
+#find .con .col1, #find .con .col2 {
+  margin-right: 10px;
+}
+/* line 839, ../sass/base.scss */
+#find .con .col1 .box-t {
+  background: #4998a1;
+}
+/* line 841, ../sass/base.scss */
+#find .con .col1 .box-t .bg {
+  background: url(../images/sprite_index@1x.png) no-repeat -193px -97px;
+}
+/* line 847, ../sass/base.scss */
+#find .con .col1 .box-d ul .item {
+  float: left;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 852, ../sass/base.scss */
+#find .con .col1 .box-d ul .item2 {
+  float: left;
+  border-right: 0;
+  margin-right: -1px;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 858, ../sass/base.scss */
+#find .con .col1 .box-d ul a {
+  display: block;
+  width: 185px;
+  height: 120px;
+  position: relative;
+}
+/* line 863, ../sass/base.scss */
+#find .con .col1 .box-d ul a p {
+  font-size: 14px;
+  color: #4998a1;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 80px;
+  line-height: 20px;
+  z-index: 1;
+}
+/* line 873, ../sass/base.scss */
+#find .con .col1 .box-d ul a img {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+}
+/* line 885, ../sass/base.scss */
+#find .con .col2 .box-t {
+  background: #7d2e5c;
+}
+/* line 887, ../sass/base.scss */
+#find .con .col2 .box-t .bg {
+  background: url(../images/sprite_index@1x.png) no-repeat -3px -162px;
+}
+/* line 892, ../sass/base.scss */
+#find .con .col2 .box-d .list-t {
+  margin-bottom: 12px;
+  height: 227px;
+}
+/* line 895, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .l {
+  float: left;
+  width: 185px;
+}
+/* line 898, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .l a {
+  display: block;
+  padding: 15px 22px 10px 23px;
+  border-right: 1px solid #e7e7e7;
+  font-family: Arial;
+}
+/* line 903, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .l a .name {
+  font-size: 16px;
+  color: #8b3a6d;
+  margin-bottom: 5px;
+  line-height: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+/* line 911, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .l a .desc {
+  color: #666;
+  height: 36px;
+  margin-bottom: 8px;
+}
+/* line 916, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .l a .split {
+  width: 19px;
+  height: 3px;
+  background: #8b3a6d;
+  margin-bottom: 12px;
+}
+/* line 922, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .l a img {
+  display: block;
+  width: 140px;
+  height: 120px;
+}
+/* line 930, ../sass/base.scss */
+#find .con .col2 .box-d .list-t .r a {
+  border-right: 0;
+}
+/* line 944, ../sass/base.scss */
+#find .col3 .box-t {
+  background: #e77005;
+}
+/* line 946, ../sass/base.scss */
+#find .col3 .box-t .bg {
+  background: url(../images/sprite_index@1x.png) no-repeat -193px -2px;
+}
+/* line 952, ../sass/base.scss */
+#find .col3 .box-d ul .item {
+  float: left;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 957, ../sass/base.scss */
+#find .col3 .box-d ul .item2 {
+  float: left;
+  border-right: 0;
+  margin-right: -1px;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 963, ../sass/base.scss */
+#find .col3 .box-d ul a {
+  display: block;
+  width: 123px;
+  height: 167px;
+  padding: 12px 0;
+  position: relative;
+  color: #666;
+}
+/* line 970, ../sass/base.scss */
+#find .col3 .box-d ul a:hover {
+  color: #c81623;
+}
+/* line 973, ../sass/base.scss */
+#find .col3 .box-d ul a img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+/* line 978, ../sass/base.scss */
+#find .col3 .box-d ul a p {
+  height: 32px;
+  text-align: left;
+  padding: 2px 11px;
+  line-height: 16px;
+  overflow: hidden;
+}
+/* line 985, ../sass/base.scss */
+#find .col3 .box-d ul a div {
+  font-weight: 400;
+  color: #fff;
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+}
+/* line 993, ../sass/base.scss */
+#find .col3 .box-d ul a .icon1 {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 30px;
+  height: 40px;
+  background: url(../images/sprite_index@1x.png) no-repeat -104px -40px;
+}
+/* line 1001, ../sass/base.scss */
+#find .col3 .box-d ul a .icon2 {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 30px;
+  height: 40px;
+  background: url(../images/sprite_index@1x.png) no-repeat -50px -100px;
+}
+/* line 1009, ../sass/base.scss */
+#find .col3 .box-d ul a .icon3 {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 30px;
+  height: 40px;
+  background: url(../images/sprite_index@1x.png) no-repeat -54px -40px;
+}
+/* line 1017, ../sass/base.scss */
+#find .col3 .box-d ul a .icon4 {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 30px;
+  height: 40px;
+  background: url(../images/sprite_index@1x.png) no-repeat 0 -100px;
+}
+/* line 1025, ../sass/base.scss */
+#find .col3 .box-d ul a .icon5 {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 30px;
+  height: 40px;
+  background: url(../images/sprite_index@1x.png) no-repeat -100px -100px;
+}
+
+/* 发现好货结束*/
+/* 底部 开始*/
+/* line 1043, ../sass/base.scss */
+#footer {
+  background-color: #EAEAEA;
+}
+#footer .service {
+  background-color: #EAEAEA;
+  width: 1190px;
+  margin: 0 auto;
+}
+/* line 1048, ../sass/base.scss */
+#footer .service .slogen {
+  height: 54px;
+  padding: 20px 0;
+  border-bottom: 1px solid #DEDEDE;
+  position: relative;
+}
+/* line 1054, ../sass/base.scss */
+#footer .service .slogen .item {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 302px;
+}
+/* line 1060, ../sass/base.scss */
+#footer .service .slogen .slogen2 {
+  margin-left: -270px;
+}
+/* line 1063, ../sass/base.scss */
+#footer .service .slogen .slogen3 {
+  margin-left: 20px;
+}
+/* line 1066, ../sass/base.scss */
+#footer .service .slogen .slogen1 {
+  margin-left: -550px;
+}
+/* line 1069, ../sass/base.scss */
+#footer .service .slogen .slogen4 {
+  margin-left: 310px;
+}
+/* line 1073, ../sass/base.scss */
+#footer .service .guide {
+  overflow: hidden;
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
+/* line 1077, ../sass/base.scss */
+#footer .service .guide dl {
+  width: 198px;
+  float: left;
+  color: #666;
+}
+/* line 1081, ../sass/base.scss */
+#footer .service .guide dl dt {
+  font-size: 16px;
+  height: 35px;
+  font-family: "微软雅黑";
+  font-weight: 700;
+}
+/* line 1087, ../sass/base.scss */
+#footer .service .guide dl dd {
+  height: 24px;
+}
+/* line 1091, ../sass/base.scss */
+#footer .service .guide .coverage {
+  float: right;
+  width: 200px;
+  height: 150px;
+  background: url(../images/ico_footer.png) no-repeat;
+}
+/* line 1096, ../sass/base.scss */
+#footer .service .guide .coverage .dt {
+  height: 35px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  color: #666;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+}
+/* line 1105, ../sass/base.scss */
+#footer .service .guide .coverage .dd {
+  height: 24px;
+}
+/* line 1107, ../sass/base.scss */
+#footer .service .guide .coverage .dd p {
+  line-height: 18px;
+}
+/* line 1110, ../sass/base.scss */
+#footer .service .guide .coverage .dd .look {
+  text-align: right;
+  margin-top: 5px;
+}
+/* line 1119, ../sass/base.scss */
+#footer .link {
+  border-top: 1px solid #E1E1E1;
+  padding-top: 23px;
+  padding: 23px 0 30px 0;
+}
+/* line 1123, ../sass/base.scss */
+#footer .link .links {
+  text-align: center;
+  font-size: 14px;
+  height: 25px;
+}
+/* line 1127, ../sass/base.scss */
+#footer .link .links a {
+  padding: 0 6px;
+  color: #666;
+  font-weight: 400;
+}
+/* line 1131, ../sass/base.scss */
+#footer .link .links a:hover {
+  color: #c81623;
+}
+/* line 1137, ../sass/base.scss */
+#footer .link .copyright {
+  text-align: center;
+  font-size: 12px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+/* line 1143, ../sass/base.scss */
+#footer .link .message {
+  text-align: center;
+}
+
+/* 底部结束*/
